@@ -64,24 +64,95 @@ La app estará disponible en `http://localhost:5173`
 
 ## 📁 Estructura del Proyecto
 
-```
-zanerdee/
-├── zanerdee-frontend/       # React + Vite
-│   ├── src/
-│   │   ├── components/      # Componentes reutilizables
-│   │   ├── pages/           # Vistas principales
-│   │   ├── hooks/           # Custom hooks
-│   │   └── assets/          # Imágenes y recursos
-│   └── package.json
+
+react/
+│   App.css
+│   App.jsx
+│   index.css
+│   main.jsx
 │
-└── zanerdee-backend/        # PHP REST API
-    ├── conexion.php          # Configuración BD
-    ├── productos/
-    │   ├── listar.php
-    │   ├── crear.php
-    │   ├── editar.php
-    │   └── eliminar.php
-    └── usuarios/
+├───assets
+│       react.svg
+│
+├───components
+│       Cart.css
+│       Cart.jsx
+│       CookiesBanner.css
+│       CookiesBanner.jsx
+│       Footer.css
+│       Footer.jsx
+│       Navbar.css
+│       Navbar.jsx
+│       ProductCard.css
+│       ProductCard.jsx
+│       ProductPicker.css
+│       ProductPicker.jsx
+│       ProtectedRoute.jsx
+│       ScrollToTop.jsx
+│       UserAuthModal.css
+│       UserAuthModal.jsx
+│       UserProtectedRoute.jsx
+│
+├───context
+│       AuthContext.jsx
+│       CartContext.jsx
+│
+├───hooks
+├───pages
+│       AdminCarts.jsx
+│       AdminOrders.jsx
+│       Checkout.css
+│       Checkout.jsx
+│       FeaturedProducts.css
+│       FeaturedProducts.jsx
+│       Home.css
+│       Home.jsx
+│       Login.css
+│       Login.jsx
+│       NateEdit.css
+│       NateEdit.jsx
+│       Nosotros.css
+│       Nosotros.jsx
+│       Pedidos.jsx
+│       Privacy.jsx
+│       ProductEdit.jsx
+│       ProductForm.css
+│       ProductForm.jsx
+│       ProductList.css
+│       ProductList.jsx
+│
+├───services
+│       api.js
+│
+└───styles
+        App.css
+|Backend
+├───api
+│   │   admin_user_carts.php
+│   │   carrito.php
+│   │   cleanup_test_pedidos.php
+│   │   config.php
+│   │   dev_auto_login.php
+│   │   list_users.php
+│   │   pedidos.php
+│   │   productos.php
+│   │   promote_admin.php
+│   │   reset_admin_password.php
+│   │   upload_image.php
+│   │   usuarios.php
+│   │   
+│   ├───config
+│   │       database.php
+│   │       
+│   ├───controllers
+│   ├───models
+│   │       Pedido.php
+│   │       Producto.php
+│   │       Usuario.php
+│   │
+│   └───routes
+└───database
+        pedidos.sql
 ```
 
 ---
