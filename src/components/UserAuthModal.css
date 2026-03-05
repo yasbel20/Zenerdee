@@ -1,0 +1,185 @@
+/* ── OVERLAY ───────────────────────────────── */
+.uauth-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── CARD ──────────────────────────────────── */
+.uauth-card {
+  background: #fff;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 4px;
+  overflow: hidden;
+  animation: slideUp 0.3s ease;
+  position: relative;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* ── HEADER ────────────────────────────────── */
+.uauth-header {
+  background: #000;
+  color: #fff;
+  padding: 2rem 2rem 1.5rem;
+  position: relative;
+  text-align: center;
+}
+
+.uauth-header h2 {
+  font-size: 1.8rem;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.uauth-header p {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+
+.uauth-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  font-size: 1.3rem;
+  line-height: 1;
+  padding: 0.3rem;
+  transition: color 0.2s;
+}
+.uauth-close:hover { color: #fff; }
+
+/* ── TABS ──────────────────────────────────── */
+.uauth-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 2px solid #eee;
+}
+
+.uauth-tab {
+  padding: 0.9rem;
+  background: none;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #aaa;
+  transition: all 0.2s;
+  font-family: inherit;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+}
+
+.uauth-tab.active {
+  color: #000;
+  border-bottom-color: #000;
+}
+
+/* ── FORM ──────────────────────────────────── */
+.uauth-form {
+  padding: 1.8rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.uauth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.uauth-field label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.uauth-field input {
+  padding: 0.8rem 1rem;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: #111;
+  transition: border-color 0.2s;
+  outline: none;
+  font-family: inherit;
+}
+
+.uauth-field input:focus {
+  border-color: #000;
+}
+
+.uauth-error {
+  background: #fff0f0;
+  border: 1px solid #fcc;
+  color: #c00;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+.uauth-btn {
+  padding: 0.95rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: inherit;
+  margin-top: 0.3rem;
+}
+
+.uauth-btn:hover:not(:disabled) { background: #333; }
+.uauth-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.uauth-switch {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888;
+  padding-bottom: 0.5rem;
+}
+
+.uauth-switch button {
+  background: none;
+  border: none;
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: inherit;
+  font-family: inherit;
+}

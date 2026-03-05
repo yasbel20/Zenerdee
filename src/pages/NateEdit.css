@@ -1,0 +1,180 @@
+.nate-edit-page {
+  margin-top: 70px;
+  min-height: calc(100vh - 70px);
+  background: white;
+}
+
+/* Hero Section */
+.nate-hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+              url('https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.nate-hero-content {
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.nate-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nate-designer {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.nate-shop-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 500;
+  letter-spacing: 3px;
+  border-bottom: 2px solid white;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Productos Grid */
+.nate-products-container {
+  max-width: 1400px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.nate-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Info Section */
+.nate-info-section {
+  background: #f8f8f8;
+  padding: 4rem 2rem;
+  margin-top: 2rem;
+}
+
+.nate-info-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nate-info-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nate-info-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.nate-features {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.feature-icon {
+  color: #4CAF50;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .nate-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nate-hero {
+    min-height: 350px;
+  }
+  
+  .nate-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .nate-shop-title {
+    font-size: 1.5rem;
+  }
+  
+  .nate-products-container {
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  
+  .nate-products-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  
+  .nate-info-section {
+    padding: 3rem 1rem;
+  }
+  
+  .nate-features {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nate-hero {
+    min-height: 300px;
+  }
+  
+  .nate-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .nate-designer {
+    font-size: 1rem;
+  }
+  
+  .nate-shop-title {
+    font-size: 1.2rem;
+  }
+  
+  .nate-info-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .nate-info-content p {
+    font-size: 1rem;
+  }
+}

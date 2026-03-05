@@ -1,0 +1,269 @@
+.navbar {
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 0.8rem 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* ── ADMIN NAVBAR ──────────────────────── */
+.navbar--admin {
+  background: #111;
+  border-bottom: 2px solid #333;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.admin-badge {
+  background: #fff;
+  color: #000;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.nav-icon--active {
+  color: #4caf50 !important;
+  cursor: default !important;
+}
+
+.nav-logout-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+}
+
+.nav-logout-btn:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+/* ── BASE NAVBAR ───────────────────────── */
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.nav-logo h1 {
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
+  letter-spacing: 2px;
+  margin: 0;
+  transition: opacity 0.3s;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-logo:hover h1 {
+  opacity: 0.8;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a,
+.nav-menu .nav-login-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #fff;
+}
+
+.nav-icon:hover {
+  color: #888;
+  transform: scale(1.1);
+}
+
+/* ── HAMBURGER ─────────────────────────── */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  color: #fff;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: all 0.3s;
+}
+
+/* ── RESPONSIVE ────────────────────────── */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: left 0.3s;
+    padding: 2rem;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu a,
+  .nav-menu .nav-login-link {
+    font-size: 1.2rem;
+  }
+
+  .nav-logout-btn {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .nav-icons {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .nav-logo h1 {
+    font-size: 1.2rem;
+  }
+
+  .nav-icon {
+    font-size: 1rem;
+  }
+}
+
+/* ── CART ICON WITH BADGE ──────────────── */
+.cart-icon-wrapper {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #fff;
+  color: #000;
+  font-size: 0.6rem;
+  font-weight: 800;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 1.5px solid #000;
+}
+
+/* ── USER LOGGED IN ────────────────────── */
+.nav-user-menu {
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.nav-user-name {
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase;
+  color: #fff;
+}
+.nav-logout-user-btn {
+  background: none; border: none; cursor: pointer;
+  color: rgba(255,255,255,0.55);
+  padding: 0.3rem; display: flex; align-items: center;
+  transition: color 0.2s;
+}
+.nav-logout-user-btn:hover { color: #fff; }
+
+/* ── CART BADGE ────────────────────────── */
+.cart-icon-wrapper {
+  position: relative; cursor: pointer;
+  display: flex; align-items: center;
+}
+.cart-badge {
+  position: absolute; top: -8px; right: -8px;
+  background: #fff; color: #000;
+  font-size: 0.6rem; font-weight: 800;
+  width: 18px; height: 18px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: 1.5px solid #000;
+}
